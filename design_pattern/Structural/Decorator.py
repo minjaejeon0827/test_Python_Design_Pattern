@@ -2,6 +2,8 @@
 # 데코레이터 패턴은 객체에 동적으로 새로운 기능을 추가할 수 있게 해주는 패턴입니다. 
 # 데코레이터는 원래 객체를 감싸서 기능을 확장합니다.
 # 참고: https://wikidocs.net/252293
+# 참고 2: https://refactoring.guru/ko/design-patterns/decorator
+# 참고 3: https://refactoring.guru/ko/design-patterns/decorator/python/example
 
 # 파이썬 디자인패턴 소스파일 실행 터미널 명령어
 # python Structural/Decorator.py
