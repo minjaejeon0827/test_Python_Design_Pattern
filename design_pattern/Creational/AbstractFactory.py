@@ -112,7 +112,7 @@ def client(factory: FurnitureFactory):
 
 # 고객이 '빅토리아풍 가구 공장'에 주문을 넣습니다.
 # 결과: 고풍스러운 의자에 앉고, 고풍스러운 소파에 눕게 됩니다. (스타일이 완벽히 일치!)
-client(VictorianFurnitureFactory())  
+client(VictorianFurnitureFactory())
 
 # 고객이 '현대식 가구 공장'에 주문을 넣습니다.
 # 결과: 현대식 의자에 앉고, 현대식 소파에 눕게 됩니다. (역시 스타일이 완벽히 일치!)

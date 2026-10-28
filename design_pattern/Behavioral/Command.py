@@ -33,7 +33,7 @@
 # 되돌리기(Undo) 가능: 주문이 객체로 쟁반(리스트)에 담겨 있기 때문에, 만약 손님이 "아까 시킨 거 취소요!"라고 하면 웨이터는 주방에 가기 전에 리스트에서 방금 넣은 주문서만 쏙 빼버리면 됩니다. 그래서 문서 작업 프로그램의 '실행 취소(Ctrl+Z)' 기능도 바로 이 커맨드 패턴으로 만들어진답니다.
 
 # abc 모듈은 "이 클래스는 뼈대 역할만 하니까, 상속받아서 써라!"라고 정해주는 도구입니다.
-from abc import ABC, abstractmethod  
+from abc import ABC, abstractmethod
 
 # ---------------------------------------------------------
 # 1. Command (명령): 모든 '주문서'가 지켜야 할 기본 양식
@@ -42,7 +42,7 @@ class Command(ABC):
     # 모든 주문서에는 무조건 "실행해!(execute)"라는 버튼(기능)이 있어야 합니다.
     @abstractmethod  
     def execute(self):  
-        pass  
+        pass
 
 # ---------------------------------------------------------
 # 2. ConcreteCommand (구체적 명령): 내용이 적힌 '진짜 주문서'
@@ -71,7 +71,7 @@ class Receiver:
 # ---------------------------------------------------------
 # 4. Invoker (호출자): 주문서를 모아서 관리하는 '웨이터'
 # ---------------------------------------------------------
-class Invoker:  
+class Invoker:
     def __init__(self):  
         # 웨이터가 주문을 받을 '빈 쟁반(리스트)'을 하나 들고 있습니다.
         self._commands = []  
@@ -80,11 +80,11 @@ class Invoker:
         # 손님이 주문서(command)를 주면, 쟁반(_commands)에 차곡차곡 쌓아둡니다.
         self._commands.append(command)  
 
-    def execute_commands(self):  
+    def execute_commands(self):
         # 웨이터가 주방에 가서 쟁반에 쌓인 주문서들을 차례대로 꺼내며 실행합니다.
-        for command in self._commands:  
+        for command in self._commands:
             # 각 주문서에 적힌 요리 지시(execute)를 발동시킵니다!
-            command.execute()  
+            command.execute()
 
 
 # ---------------------------------------------------------
@@ -101,7 +101,7 @@ command = ConcreteCommand(receiver)
 invoker = Invoker()  
 
 # 4. 웨이터의 쟁반에 방금 작성한 주문서를 올려둡니다. (아직 요리 시작 안 함!)
-invoker.add_command(command)  
+invoker.add_command(command)
 
 # 5. 웨이터가 주방으로 가서 쟁반에 있는 모든 주문서를 실행시킵니다.
 # 결과: 주문서가 작동하면서, 연결된 요리사가 "Receiver action" 요리를 시작합니다!

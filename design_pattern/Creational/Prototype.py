@@ -45,7 +45,7 @@ class Prototype:
 # (이 과정이 원래는 엄청 오래 걸리고 힘든 작업이라고 상상해 보세요!)
 prototype1 = Prototype(10)
 
-# 2. 똑같은 물건이 하나 더 필요하네요? 
+# 2. 똑같은 물건이 하나 더 필요하네요?
 # 처음부터 새로 만들지 않고, 원본 물건의 '복사 버튼(clone)'을 눌러서 복제품을 만듭니다.
 prototype2 = prototype1.clone()
 
@@ -60,3 +60,5 @@ prototype2.value = 20
 # 복제품만 20으로 바뀌었고, 원본은 안전하게 10을 유지하고 있죠?
 # 즉, 둘은 처음엔 똑같았지만 일란성 쌍둥이처럼 연결되어 있지 않은 '완전히 독립된 별개의 물건'이라는 뜻이에요!
 print(prototype1.value, prototype2.value)
+
+print(prototype1 is prototype2)

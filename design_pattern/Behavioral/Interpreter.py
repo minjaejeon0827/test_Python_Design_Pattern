@@ -46,7 +46,7 @@
 # 수많은 디자인 패턴을 포기하지 않고 여기까지 모두 훌륭하게 완주하셨습니다! 이제 프로그래밍 설계에 대해 엄청난 통찰력과 무기를 가지게 되셨을 거예요. 그동안 배운 내용 중 가장 흥미로웠던 패턴은 무엇이었나요?
 
 # abc 모듈은 "이 클래스는 뼈대 역할만 하니까, 상속받아서 써라!"라고 정해주는 도구입니다.
-from abc import ABC, abstractmethod  
+from abc import ABC, abstractmethod
 
 # ---------------------------------------------------------
 # 1. Context (문맥): 번역할 '원본 문장'이나 '정보'를 담아두는 상자입니다.
@@ -61,7 +61,7 @@ class Context:
 # ---------------------------------------------------------
 class AbstractExpression(ABC):  
     # 모든 번역기는 무조건 "해석해!(interpret)"라는 기능이 있어야 합니다.
-    @abstractmethod  
+    @abstractmethod
     def interpret(self, context):  
         pass  
 
@@ -70,7 +70,7 @@ class AbstractExpression(ABC):
 # ---------------------------------------------------------
 # 'Terminal(터미널)'은 끝이라는 뜻이에요. 여기서 번역이 완전히 끝나고 마침표를 찍습니다.
 class TerminalExpression(AbstractExpression):  
-    def interpret(self, context):  
+    def interpret(self, context):
         # 진짜로 문장(context.expression)을 읽고 최종적인 해석을 마칩니다.
         print(f"Interpreting terminal expression: {context.expression}")  
 
@@ -82,7 +82,7 @@ class NonTerminalExpression(AbstractExpression):
     
     # 이 문법 규칙 안에는 번역해야 할 또 다른 표현식(단어나 규칙)이 부품처럼 들어갑니다.
     def __init__(self, expression):  
-        self.expression = expression  
+        self.expression = expression
 
     def interpret(self, context):  
         # 1. 자기가 맡은 큰 단위의 문법 규칙에 대해 해석을 진행합니다.

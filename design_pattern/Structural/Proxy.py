@@ -3,6 +3,8 @@
 # 프록시는 실제 객체에 대한 참조를 유지하며, 요청을 실제 객체로 전달하거나, 추가적인 기능을 수행합니다.
 
 # 참고: https://wikidocs.net/252293
+# 참고 2: https://refactoring.guru/ko/design-patterns/proxy
+# 참고 3: https://refactoring.guru/ko/design-patterns/proxy/python/example
 
 # 파이썬 디자인패턴 소스파일 실행 터미널 명령어
 # python Structural/Proxy.py

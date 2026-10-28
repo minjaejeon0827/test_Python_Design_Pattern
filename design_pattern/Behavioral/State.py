@@ -46,7 +46,7 @@ class State(ABC):
 
 # '라이트 모드(밝은 화면)' 상태라고 상상해 보세요.
 class ConcreteStateA(State):  
-    def handle(self, context):  
+    def handle(self, context):
         # 1. 라이트 모드일 때 해야 할 일을 합니다.
         print("State A") # "현재 라이트 모드입니다! 화면을 밝게 만듭니다."
         
@@ -55,13 +55,13 @@ class ConcreteStateA(State):
         context.state = ConcreteStateB()  
 
 # '다크 모드(어두운 화면)' 상태라고 상상해 보세요.
-class ConcreteStateB(State):  
-    def handle(self, context):  
+class ConcreteStateB(State):
+    def handle(self, context):
         # 1. 다크 모드일 때 해야 할 일을 합니다.
         print("State B") # "현재 다크 모드입니다! 화면을 어둡게 만듭니다."
         
         # 2. 할 일을 다 마친 뒤, 스마트폰(context)의 상태를 다시 '라이트 모드(A)'로 바꿔버립니다!
-        context.state = ConcreteStateA()  
+        context.state = ConcreteStateA()
 
 
 # ---------------------------------------------------------
